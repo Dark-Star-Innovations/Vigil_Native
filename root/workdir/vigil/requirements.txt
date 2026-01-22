@@ -1,25 +1,26 @@
-+  1 # VIGIL - Dependencies
-+  2 # ====================
-+  3 
-+  4 # Core AI
-+  5 openai>=1.0.0
-+  6 anthropic>=0.18.0
-+  7 
-+  8 # Voice
-+  9 SpeechRecognition>=3.10.0
-+ 10 pyttsx3>=2.90
-+ 11 elevenlabs>=1.0.0
-+ 12 pygame>=2.5.0
-+ 13 pyaudio>=0.2.14
-+ 14 
-+ 15 # Utilities
-+ 16 python-dotenv>=1.0.0
-+ 17 pydantic>=2.0.0
-+ 18 
-+ 19 # Optional: For Poe API access to Gemini
-+ 20 # fastapi-poe>=0.0.36
-+ 21 
-+ 22 # Note: PyAudio may require additional setup on Windows
-+ 23 # If pip install pyaudio fails, try:
-+ 24 # pip install pipwin
-+ 25 # pipwin install pyaudio
+# VIGIL - Dependencies
+# ====================
+
+# Core AI
+openai>=1.0.0
+anthropic>=0.18.0
+
+# Voice
+SpeechRecognition>=3.10.0
+pyttsx3>=2.90
+elevenlabs>=1.0.0
+pygame>=2.5.0
+pyaudio>=0.2.14
+
+# Utilities
+requests>=2.31.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Optional: For Poe API access to Gemini
+# fastapi-poe>=0.0.36
+
+# Note: PyAudio may require additional setup on Windows
+# If pip install pyaudio fails, try:
+# pip install pipwin
+# pipwin install pyaudio

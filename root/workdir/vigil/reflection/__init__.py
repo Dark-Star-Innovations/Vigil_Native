@@ -1,1 +1,1 @@
-+ 1 """Vigil Reflection Module"""
+"""Vigil Reflection Module"""
