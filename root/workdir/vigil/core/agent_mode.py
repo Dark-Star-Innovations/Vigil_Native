@@ -11,12 +11,21 @@ from datetime import datetime
 
 # Import task manager enums for type checking
 try:
-    from core.task_manager import TaskStatus
+    from core.task_manager import TaskStatus, TaskPriority
 except ImportError:
     # Define fallback if import fails during testing
     class TaskStatus:
         TODO = "todo"
+        IN_PROGRESS = "in_progress"
+        COMPLETED = "completed"
         BLOCKED = "blocked"
+        CANCELLED = "cancelled"
+    
+    class TaskPriority:
+        LOW = "low"
+        MEDIUM = "medium"
+        HIGH = "high"
+        URGENT = "urgent"
 
 
 class AgentMode(Enum):
@@ -168,7 +177,7 @@ class AgentSystem:
         
         # Check for overdue tasks
         todos = self.task_manager.list_tasks(status=TaskStatus.TODO)
-        urgent_tasks = [t for t in todos if t.priority.value == "urgent"]
+        urgent_tasks = [t for t in todos if t.priority in [TaskPriority.URGENT, TaskPriority.HIGH]]
         
         if urgent_tasks:
             tasks_list = ", ".join([t.title for t in urgent_tasks[:3]])

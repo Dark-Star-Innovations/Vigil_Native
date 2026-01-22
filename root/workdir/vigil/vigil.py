@@ -303,7 +303,8 @@ Respond naturally as Vigil. Keep voice responses concise (2-4 sentences) unless 
             response = f"You have {total} tasks: {todo_count} to do, {in_progress} in progress, {completed} completed."
             
             # List up to 3 urgent/high priority tasks
-            urgent_tasks = [t for t in tasks if t.priority.value in ["urgent", "high"] and t.status != TaskStatus.COMPLETED]
+            from core.task_manager import TaskPriority
+            urgent_tasks = [t for t in tasks if t.priority in [TaskPriority.URGENT, TaskPriority.HIGH] and t.status != TaskStatus.COMPLETED]
             if urgent_tasks:
                 task_names = ", ".join([t.title for t in urgent_tasks[:3]])
                 response += f" Urgent: {task_names}."
