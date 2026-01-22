@@ -416,7 +416,7 @@ Respond naturally as Vigil. Keep voice responses concise (2-4 sentences) unless 
         print(f"[{BOT_NAME}] Vigil is now active and listening.")
         print(f"[{BOT_NAME}] Say one of the wake words to begin.")
         print(f"[{BOT_NAME}] Press Ctrl+C to shutdown.")
-        print(f"[{BOT_NAME}] ═���═════════════════════════════════════════\n")
+        print(f"[{BOT_NAME}] ═══════════════════════════════════════════\n")
 
         # Keep running until shutdown
         try:
