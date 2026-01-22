@@ -1,1 +1,1 @@
-+ 1 """Vigil Knowledge Module"""
+"""Vigil Knowledge Module"""
